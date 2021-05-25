@@ -53,32 +53,32 @@ ________________________________________________________________________________
 | churn  | 7043 non-null: object | churn: yes or no |
 
 
-| Feature                 |       Datatype        |    Definition      |
-|-------------------------|-----------------------|:------------------:|
-|gender                   |7043 non-null: object  |     0 or 1         |
-|senior_cititzen	      |7043 non-null: int64   |0 or 1
-|partner	              |7043 non-null: object  |0 or 1
-|dependents	              |7043 non-null: object  |0 or 1
-|tenure	                  |7043 non-null: int64   |in number of months
-|phone_service	          |7043 non-null: object  |0, 1 or 2
-|multiple_lines	          |7043 non-null: object  |0 or 1
-|internet_service_type_id |7043 non-null: int64   |0 or 1
-|online_security	      |7043 non-null: object  |0 or 1
-|online_backup	          |7043 non-null: object  |0 or 1
-|device_protection	      |7043 non-null: object  |0 or 1
-|tech_support	          |7043 non-null: object  |0 or 1
-|streaming_tv	          |7043 non-null: object  |0 or 1
-|streaming_movies	      |7043 non-null: object  |0 or 1
-|contract_type_id	      |7043 non-null: int64   |0 or 1
-|paperless_billing	      |7043 non-null: object  |0 or 1
-|payment_type_id	      |7043 non-null: int64   |0 or 1
-|monthly_charges	      |7043 non-null: float64 |USD cost per month
-|total_charges	          |7043 non-null: object  |USD cost total
-|contract_type_id	      |7043 non-null: int64   |0, 1 or 2
-|contract_type	          |7043 non-null: object  |explains type of plan
-|payment_type_id	      |7043 non-null: int64   |0, 1 or 2
-|payment_type	          |7043 non-null: object  |explains type of plan
-|internet_service_type_id |7043 non-null: int64   |0, 1 or 2
-|internet_service_type	  |7043 non-null: object  |explains type of plan
+| Feature                 |       Datatype        |    Definition            |
+|-------------------------|-----------------------|:------------------------:|
+|gender                   |7043 non-null: object  | Female or Male           |
+|senior_cititzen	      |7043 non-null: int64   |0 or 1 (boolean)          |
+|partner	              |7043 non-null: object  |Yes or No                 |
+|dependents	              |7043 non-null: object  |Yes or No                 |
+|tenure	                  |7043 non-null: int64   |in number of months       |
+|phone_service	          |7043 non-null: object  |Yes or No                 |
+|multiple_lines	          |7043 non-null: object  |Yes, No phone service, No |
+|internet_service_type_id |7043 non-null: int64   |1, 2, or 3                |
+|online_security	      |7043 non-null: object  |Yes or No                 |
+|online_backup	          |7043 non-null: object  |Yes or No                 |
+|device_protection	      |7043 non-null: object  |Yes or No                 |
+|tech_support	          |7043 non-null: object  |Yes or No                 |
+|streaming_tv	          |7043 non-null: object  |Yes or No                 |
+|streaming_movies	      |7043 non-null: object  |Yes or No                 |
+|contract_type_id	      |7043 non-null: int64   |1, 2, or 3                |
+|paperless_billing	      |7043 non-null: object  |Yes or No                 |
+|payment_type_id	      |7043 non-null: int64   |1, 2, 3 or 4              |
+|monthly_charges	      |7043 non-null: float64 |USD cost per month        |
+|total_charges	          |7043 non-null: object  |USD cost total            |
+|contract_type_id	      |7043 non-null: int64   |1, 2, or 3                |
+|contract_type	          |7043 non-null: object  |explains type of plan     |
+|payment_type_id	      |7043 non-null: int64   |1, 2, 3 or 4              |
+|payment_type	          |7043 non-null: object  |explains type of plan     |
+|internet_service_type_id |7043 non-null: int64   |1, 2 or 3                 |
+|internet_service_type	  |7043 non-null: object  |explains type of plan     |
 
 
