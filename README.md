@@ -82,3 +82,11 @@ ________________________________________________________________________________
 |internet_service_type	  |7043 non-null: object  |explains type of plan     |
 
 
+
+___________________________________________________________________________________
+
+## Other resources
+- Trello board: https://trello.com/b/g5ZLX2er/classification-project
+- Canva Customer Retenetion Project: https://www.canva.com/design/DAEdbr4_q_k/share/preview?token=4GETfzg3CIZCyWowl9x88A&role=EDITOR&utm_content=DAEdbr4_q_k&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton
+
+
