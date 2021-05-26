@@ -76,7 +76,6 @@ ________________________________________________________________________________
 |total_charges	          |7043 non-null: object  |USD cost total            |
 |contract_type_id	      |7043 non-null: int64   |1, 2, or 3                |
 |contract_type	          |7043 non-null: object  |explains type of plan     |
-|payment_type_id	      |7043 non-null: int64   |1, 2, 3 or 4              |
 |payment_type	          |7043 non-null: object  |explains type of plan     |
 |internet_service_type_id |7043 non-null: int64   |1, 2 or 3                 |
 |internet_service_type	  |7043 non-null: object  |explains type of plan     |
@@ -85,7 +84,20 @@ ________________________________________________________________________________
 
 ___________________________________________________________________________________
 
+## Reproducibility
+
+You will need your own env file with database credentials along with all the necessary files listed below to run my final project notebook.
+
+- Read this README.md
+- Download the aquire.py, prepare.py, and final_report.ipynb files into your working directory
+- Add your own env file to your directory. (user, password, host)
+- Run the final_report.ipynb notebook
+
+
+___________________________________________________________________________________
+
 ## Other resources
+
 - Trello board: https://trello.com/b/g5ZLX2er/classification-project
 - Canva Customer Retenetion Project: https://www.canva.com/design/DAEdbr4_q_k/share/preview?token=4GETfzg3CIZCyWowl9x88A&role=EDITOR&utm_content=DAEdbr4_q_k&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton
 
