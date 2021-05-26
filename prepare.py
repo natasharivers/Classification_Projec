@@ -13,7 +13,7 @@ def prep_telco_churn(df):
     Returns the telco_churn df.
     '''
     # drop and rename columns
-    df = df.drop(columns=['customer_id', 'internet_service_id', 'contract_type_id', 'payment_type_id'])
+    # df = df.drop(columns=['customer_id', 'internet_service_id', 'contract_type_id', 'payment_type_id'])
     
     # change data types
     df.total_charges = df.total_charges.str.replace(' ', '0').astype(float)
