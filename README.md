@@ -48,9 +48,9 @@ ________________________________________________________________________________
 
 ## Data Dictionary
 
-| Target |       Datatype        |    Definition    |
-|--------|-----------------------|------------------|
-| churn  | 7043 non-null: object | churn: yes or no |
+| Target |       Datatype        |    Definition      |
+|--------|-----------------------|:------------------:|
+| churn  | 7043 non-null: object |  yes or no         |
 
 
 | Feature                 |       Datatype        |    Definition            |
