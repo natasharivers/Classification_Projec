@@ -23,17 +23,16 @@ def prep_telco_churn(df):
 
 ###################### Test Train Split Telco Churn Data ######################
 
-
-def test_train_split(df):
+def train_validate_test_split(df):
     '''
     This function take in the telco_churn data from aquire.py, get_telco_churn_data(),
     performs a split, stratifies by churn.
     Returns train, validate, and test dfs.
     '''
     train_validate, test = train_test_split(df, test_size=.2, 
-                                        random_state=123,
-                                        stratify = df.churn)
+                                        random_state=123, 
+                                        stratify=df.churn)
     train, validate = train_test_split(train_validate, test_size=.3, 
-                                   random_state=123,
-                                   stratify= train.churn)
-    return train, validate, test    
+                                   random_state=123, 
+                                   stratify=train_validate.churn)
+    return train, validate, test
