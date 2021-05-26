@@ -17,9 +17,7 @@ def prep_telco_churn(df):
     
     # change data types
     df.total_charges = df.total_charges.str.replace(' ', '0').astype(float)
-    
-    # EXAMPLE: add dummy columns to df
-    #df = pd.concat([df, species_dummies], axis=1)
+    df.telco.replace({'churn': {'No':0, 'Yes':1}}, inplace=True)
     
     return df
 
