@@ -34,10 +34,10 @@ def model_performs (X_df, y_df, model):
     confusion matrix, rates, clasification report.
     X_df: train, validate or  test. Select one
     y_df: it has to be the same as X_df.
-    model: name of your model that you prevously created 
+    model: name of your model that you previously created 
     
     Example:
-    mmodel_performs (X_train, y_train, model1)
+    model_performs (X_train, y_train, model1)
     '''
 
     #prediction
