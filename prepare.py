@@ -12,12 +12,12 @@ def prep_telco_churn(df):
     This function takes in the telco_churn df acquired by get_telco_churn_data
     Returns the telco_churn df.
     '''
-    # drop duplicate columns
+    # drop duplicate columns from join
     df = df.loc[:, ~df.columns.duplicated()]
     
     # change data types
     df.total_charges = df.total_charges.str.replace(' ', '0').astype(float)
-    df.telco.replace({'churn': {'No':0, 'Yes':1}}, inplace=True)
+    df.replace({'churn': {'No':0, 'Yes':1}}, inplace=True)
     
     #drop duplicates
     df.drop_duplicates(inplace=True)
