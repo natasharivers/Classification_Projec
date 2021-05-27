@@ -19,10 +19,10 @@ def split_Xy (df, column):
     '''
     Take in a DataFrame (train, validate, test) and return X and y; .
     df: train, validate or  test. Select one
-    column: which columns you want to  stratify on. Ex. stratify on 'survived'
+    column: which columns you want to  stratify on. Ex. stratify on 'churned'
     return X, y  DataFrames.
     Example:
-    X_validate, y_validate = model.split_Xy(validate, 'survived') 
+    X_validate, y_validate = model.split_Xy(validate, 'churned') 
     '''
     X_df = df.drop(columns= column)
     y_df = df[[column]]
@@ -48,7 +48,7 @@ def model_performs (X_df, y_df, model):
 
     #conf Matrix
     conf = confusion_matrix(y_df, pred)
-    mat =  pd.DataFrame ((confusion_matrix(y_df, pred )),index = ['actual_dead','actual_survived'], columns =['pred_dead','pred_survived' ])
+    mat =  pd.DataFrame ((confusion_matrix(y_df, pred )),index = ['actual_didnt_churn','actual_churned'], columns =['pred_didint_churn','pred_churned' ])
     rubric_df = pd.DataFrame([['True Negative', 'False positive'], ['False Negative', 'True Positive']], columns=mat.columns, index=mat.index)
     cf = rubric_df + ': ' + mat.values.astype(str)
 
@@ -66,7 +66,7 @@ def model_performs (X_df, y_df, model):
 
     #classification report
     clas_rep =pd.DataFrame(classification_report(y_df, pred, output_dict=True)).T
-    clas_rep.rename(index={'0': "dead", '1': "survived"}, inplace = True)
+    clas_rep.rename(index={'0': "didnt churn", '1': "churned"}, inplace = True)
     print(f'''
     The accuracy for our model is {acc:.4%}
     The True Positive Rate is {tpr:.3%},    The False Positive Rate is {fpr:.3%},
@@ -74,7 +74,7 @@ def model_performs (X_df, y_df, model):
     ________________________________________________________________________________
     ''')
     print('''
-    The positive is  'survived'
+    The positive is  'churned'
     Confusion Matrix
     ''')
     display(cf)
@@ -135,13 +135,13 @@ def compare (model1, model2, X_df,y_df):
     #conf Matrix
     #model 1
     conf1 = confusion_matrix(y_df, pred1)
-    mat1 =  pd.DataFrame ((confusion_matrix(y_df, pred1 )),index = ['actual_dead','actual_survived'], columns =['pred_dead','pred_survived' ])
+    mat1 =  pd.DataFrame ((confusion_matrix(y_df, pred1 )),index = ['actual_didnt_churn','actual_churned'], columns =['pred_didnt_churn','pred_churned' ])
     rubric_df = pd.DataFrame([['True Negative', 'False positive'], ['False Negative', 'True Positive']], columns=mat1.columns, index=mat1.index)
     cf1 = rubric_df + ': ' + mat1.values.astype(str)
     
     #model2
     conf2 = confusion_matrix(y_df, pred2)
-    mat2 =  pd.DataFrame ((confusion_matrix(y_df, pred2 )),index = ['actual_dead','actual_survived'], columns =['pred_dead','pred_survived' ])
+    mat2 =  pd.DataFrame ((confusion_matrix(y_df, pred2 )),index = ['actual_didnt_churn','actual_churned'], columns =['pred_didnt_churn','pred_churn' ])
     cf2 = rubric_df + ': ' + mat2.values.astype(str)
     #model 1
     #assign the values
@@ -172,11 +172,11 @@ def compare (model1, model2, X_df,y_df):
     #classification report
     #model1
     clas_rep1 =pd.DataFrame(classification_report(y_df, pred1, output_dict=True)).T
-    clas_rep1.rename(index={'0': "dead", '1': "survived"}, inplace = True)
+    clas_rep1.rename(index={'0': "didnt churn", '1': "churned"}, inplace = True)
 
     #model2
     clas_rep2 =pd.DataFrame(classification_report(y_df, pred2, output_dict=True)).T
-    clas_rep2.rename(index={'0': "dead", '1': "survived"}, inplace = True)
+    clas_rep2.rename(index={'0': "didnt churn", '1': "churned"}, inplace = True)
     print(f'''
     ******       Model 1  ******                                ******     Model 2  ****** 
     The accuracy for our model 1 is {acc1:.4%}            |   The accuracy for our model 2 is {acc2:.4%}  
@@ -188,7 +188,7 @@ def compare (model1, model2, X_df,y_df):
     _____________________________________________________________________________________________________________
     ''')
     print('''
-    The positive is  'survived'
+    The positive is  'churned'
     Confusion Matrix
     ''')
     cf1_styler = cf1.style.set_table_attributes("style='display:inline'").set_caption('Confusion Matrix')
