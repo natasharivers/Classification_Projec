@@ -68,11 +68,10 @@ ________________________________________________________________________________
 ___________________________________________________________________________________
 
 ## Initial Hypothesis
-
-Hypothesis - I rejected the Null Hypothesis.
-alpha = .05
-$H_{0}$: There is no relationship between churn and customer age 
-$H_{a}$: There is a relationshp between churn and customer age 
+- Hypothesis - I rejected the Null Hypothesis.
+- alpha = .05
+- $H_{0}$: There is no relationship between churn and customer age 
+- $H_{a}$: There is a relationshp between churn and customer age 
 
 ___________________________________________________________________________________
 ___________________________________________________________________________________
