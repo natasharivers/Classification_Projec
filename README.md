@@ -1,4 +1,4 @@
-# Classification_Project
+# Telco Churn Classification Project
 
 
 ## Project Objectives
