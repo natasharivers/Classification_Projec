@@ -18,15 +18,10 @@ def prep_telco_churn(df):
     # change data types
     df.total_charges = df.total_charges.str.replace(' ', '0').astype(float)
     df.replace({'churn': {'No':0, 'Yes':1}}, inplace=True)
-    
+ 
     #drop duplicates
     df.drop_duplicates(inplace=True)
-
-    #create dummies
-    dummy_df = pd.get_dummies(df[['internet_service_type_id','contract_type_id']], dummy_na = False, drop_first=[True,True])
-    #concat dummies with original df
-    df= pd.concat([df, dummy_df], axis=1)
-
+    
     return df
 
 ###################### Test Train Split Telco Churn Data ######################
