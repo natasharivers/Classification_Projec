@@ -21,8 +21,8 @@ def get_connection(db_name):
 #create function to retrieve telco_churn data
 def get_telco_churn_data():
     '''
-    This function reads in the telco churn data from the Codeup db
-    and returns a pandas DataFrame with all tables joined.
+    This function reads in the Telco Churn data from the Codeup db
+    and returns a pandas DataFrame with three joined tables and all columns.
     '''
     
     sql_query = '''
